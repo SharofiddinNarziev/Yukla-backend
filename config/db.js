@@ -1,9 +1,10 @@
-require('dotenv').config();
+// config/db.js
+const { Pool } = require("pg");
 const dotenv = require("dotenv");
-const { Pool } = require('pg');
+dotenv.config();
 
-
-console.log("🔍 DB_HOST:", process.env.DB_HOST); // Debug
+// 🧪 Log orqali tekshirib ko‘ramiz
+console.log("🔗 DBga ulanish uchun foydalanuvchi:", process.env.DB_USER);
 
 const pool = new Pool({
   host: process.env.DB_HOST,
