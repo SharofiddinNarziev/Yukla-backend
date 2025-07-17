@@ -27,7 +27,7 @@ app.use((req, res, next) => {
 // 🔁 Asosiy ishlar
 async function startServer() {
   try {
-    await pool.query();
+    await pool.query("SELECT NOW()");
     console.log("✅ PostgreSQL ma'lumotlar bazasiga ulandik");
 
     // 📌 API yo‘nalishlari
